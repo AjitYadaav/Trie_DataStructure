@@ -29,13 +29,18 @@ class Trie{
             }
             temp = temp->children[key[i]];
         }
-        temp->endOfWord = false;
+        temp->endOfWord = true;
     }
 };
 
 int main(){
     vector<string>words = {"the","a","there","any","thee"};
     Trie trie;
+
+    //insertion 
+    for(int i = 0; i<words.size(); i++){
+        trie.insert(words[i]);
+    }
 
     return 0;
 }
